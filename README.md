@@ -1,1 +1,2 @@
-# RPG_game
+# RPG game
+this is amazing game

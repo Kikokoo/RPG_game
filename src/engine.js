@@ -49,4 +49,28 @@ export default class Engine {
         this.lastTime = time;
         window.requestAnimationFrame(this.loop.bind(this));
     }
+        loop() {
+        let time = new Date().getTime();
+        let dt = (time - this.lastTime) / 1000;
+
+        //do update
+        if(this.update) {
+            this.update(dt);
+        }
+
+        this.ctx.fillStyle = "#303030";
+        this.ctx.fillRect(0, 0, this.canvas.width, this.canvas.height);
+
+        //do drawing
+        this.objs.forEach(obj => {
+            obj.draw(this.ctx);
+        });
+
+        this.lastTime = time;
+        window.requestAnimationFrame(this.loop.bind(this));
+    }
+    function newMasage(par) {
+        console.log(par);
+    }
+    newMasage("Hay");
 }

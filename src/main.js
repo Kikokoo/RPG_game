@@ -8,6 +8,7 @@ import missingIMG from './images/missing.jpg';
 let engine = new Engine();
 
 let player = new Player(50, 50);
+let newPlayer = new Player(80, 80);
 
 let map = new GameObject();
 map.addClild(new Renderable(missingIMG, 1));
